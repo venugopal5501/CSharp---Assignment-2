@@ -12,7 +12,7 @@ class reverse
             reverse = (reverse * 10) + last;
             a = a / 10;
         }
-        Console.WriteLine("The reversed number is "+reverse);
+        Console.WriteLine("The reversed number is " + reverse);
 
 
     }
