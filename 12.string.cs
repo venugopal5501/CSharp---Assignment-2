@@ -17,18 +17,21 @@ class word
 {
     public static void Main(string[] args)
     {
-        int temp, left = 0;
         string a;
         Console.Write("Enter Word : ");
         a = Console.ReadLine();
-        int right = a.Length - 1;
-        while (a[left] < a[right]){
-            temp = a[right];
-            a[right] = a[left];
-            a[left] = temp;
+        char[] arr = a.ToCharArray();
+        int left = 0;
+        int right = arr.Length - 1;
+        while (left < right)
+        {
+            char temp = arr[right];
+            arr[right] = arr[left];
+            arr[left] = temp;
             left++;
             right--;
         }
-        Console
+        string reversed = new string(arr);
+        Console.Write("The Reversd word is : " + reversed);
     }
 }
